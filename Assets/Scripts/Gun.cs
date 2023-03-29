@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour {
-    public Transform spawnBullet;
-    public GameObject bullet;
-    public float speed = 10f;
-    public float timer;
-    public float shotRate = 0.5f;
+    [SerializeField] private Transform spawnBullet;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float timer;
+    [SerializeField] private float shotRate = 0.5f;
+   
 
    
 
@@ -22,8 +23,19 @@ public class Gun : MonoBehaviour {
         }
     }
 
-    public void Shot(){
-        GameObject newBullet = Instantiate(bullet, spawnBullet.position, Quaternion.identity);
+    public virtual void Shot(){
+        GameObject newBullet = Instantiate(bulletPrefab, spawnBullet.position, Quaternion.identity);
         newBullet.GetComponent<Rigidbody>().velocity = speed * spawnBullet.forward;
+    }
+
+    public virtual void ActivateGun(){
+        gameObject.SetActive(true);
+    }
+
+    public virtual void DeActivateGun(){
+        gameObject.SetActive(false);
+    }
+
+    public virtual void AddBullets(int bullets){
     }
 }

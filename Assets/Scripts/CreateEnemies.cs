@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CreateEnemies : MonoBehaviour {
-    public GameObject[] enemies;
+    [SerializeField] private GameObject[] enemies;
     public Transform[] spawn;
 
     private void Start(){

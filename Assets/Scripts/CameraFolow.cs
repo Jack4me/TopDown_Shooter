@@ -5,8 +5,10 @@ using UnityEngine;
 public class CameraFolow : MonoBehaviour {
     public Transform target;
     public float lerpRate;
-    void Update()
+    void LateUpdate()
     {
+        
+        // MoveTowards сделать
         transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * lerpRate);
     }
 }
