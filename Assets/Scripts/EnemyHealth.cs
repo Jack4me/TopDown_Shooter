@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
-    public int health;
+    [SerializeField] private int health;
 
     public void TakeDamage(int damage){
         health -= damage;

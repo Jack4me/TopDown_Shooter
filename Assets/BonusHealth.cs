@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BonusHealth : MonoBehaviour {
-    public int countOfHealth = 1;
+    [SerializeField] private int countOfHealth = 1;
 
     private void OnTriggerEnter(Collider other){
-        if (other.attachedRigidbody.GetComponent<PlayerHealth>()){
-            other.attachedRigidbody.GetComponent<PlayerHealth>().AddHealth(countOfHealth);
+        if (other.CompareTag("Player")){
+            other.attachedRigidbody.GetComponent<Health>().AddHealth(countOfHealth);
             Destroy(gameObject);
         }
     }

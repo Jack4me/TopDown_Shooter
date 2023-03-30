@@ -8,7 +8,10 @@ public class TakeDamageByCollision : MonoBehaviour
     private void OnCollisionEnter(Collision collision){
         if (collision.rigidbody){
             if (collision.rigidbody.GetComponent<Bullet>()){
-               gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+               if(CompareTag("Enemy"))
+               {
+                   GetComponent<Health>().TakeDamage(1);
+               }
             }
         }
     }

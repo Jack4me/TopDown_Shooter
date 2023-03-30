@@ -8,8 +8,8 @@ public class MakeDamageByCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision){
         if (collision.rigidbody){
-            if (collision.rigidbody.GetComponent<PlayerHealth>()){
-                collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(1);
+            if (collision.rigidbody.GetComponent<Health>()){
+                collision.rigidbody.GetComponent<Health>().TakeDamage(1);
             }
         }
     }

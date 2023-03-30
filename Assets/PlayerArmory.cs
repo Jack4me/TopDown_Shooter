@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerArmory : MonoBehaviour {
     [SerializeField] private Gun[] guns;
-    private int gunIndex = 1;
+    private int gunIndex = 0;
     
     void Start(){
         TakeGunByIndex(gunIndex);
