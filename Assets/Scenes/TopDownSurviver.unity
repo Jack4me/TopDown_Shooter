@@ -276,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267557763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.123, z: 0.879}
+  m_LocalPosition: {x: 0, y: 0.12, z: 1.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1119,6 +1119,7 @@ MonoBehaviour:
   rateRotation: 450
   runSpeed: 8
   walkSpeed: 5
+  enemySpeed: 5
 --- !u!143 &1208504365
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1192,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319744980}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0069999695, y: 0.12299991, z: 0.9}
+  m_LocalPosition: {x: 0.0069999695, y: 0.12299991, z: 1.019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1284,7 +1285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnBullet: {fileID: 267557764}
   bulletPrefab: {fileID: 282206095686694157, guid: 45bf22116c22df14b865340a0f1313c0, type: 3}
-  speed: 20
+  speedBullet: 20
   timer: 0
   shotRate: 0.5
 --- !u!1 &1449515952 stripped
@@ -1311,7 +1312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnBullet: {fileID: 1319744981}
   bulletPrefab: {fileID: 282206095686694157, guid: 45bf22116c22df14b865340a0f1313c0, type: 3}
-  speed: 60
+  speedBullet: 30
   timer: 0
   shotRate: 0.2
   bullets: 30

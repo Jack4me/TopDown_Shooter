@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Automate : Gun {
-    [SerializeField] private int bullets = 30;
+    [SerializeField] private int bullets = 90;
     [SerializeField] private PlayerArmory _armory;
     
     public override void Shot(){
