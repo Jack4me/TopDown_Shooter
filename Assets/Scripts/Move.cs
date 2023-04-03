@@ -18,8 +18,9 @@ public class Move : MonoBehaviour {
         }
 
         if (Active == false){
-            Vector3 toTarget = dir - transform.position;
-            transform.position += toTarget * speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, dir, Time.deltaTime * speed);
+            //Vector3 toTarget = dir - transform.position;
+           // transform.position += toTarget * speed * Time.deltaTime;
         }
     }
 }

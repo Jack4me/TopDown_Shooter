@@ -9,14 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5437407838366224644}
+  - component: {fileID: 5047173127975617606}
   - component: {fileID: 5434208982429033314}
   - component: {fileID: 2393580532747558044}
+  - component: {fileID: 489097099802095510}
   - component: {fileID: 3282871699053610305}
-  - component: {fileID: -2733027533136897690}
   - component: {fileID: 9182952196963541137}
   - component: {fileID: 8169872859144377495}
   m_Layer: 0
-  m_Name: EnemySlowZombie
+  m_Name: EnemyFastZombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,6 +39,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5047173127975617606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437407838366224641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9737bc57f705fb04bb4385c8735bb422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 0}
 --- !u!114 &5434208982429033314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,9 +76,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda26111e8241e64aab59471771848fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateRotation: 4
-  runSpeed: 3
-  walkSpeed: 5
+  speed: 6
+--- !u!114 &489097099802095510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437407838366224641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eff33e6d1d7e044f8ac819d1be77d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
 --- !u!114 &3282871699053610305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,19 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68576198e97594548aa395d531a8b4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-2733027533136897690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5437407838366224641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eff33e6d1d7e044f8ac819d1be77d07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
 --- !u!54 &9182952196963541137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -180,7 +192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 879260548ddc5aa4093ab3e55e23dba1, type: 2}
+  - {fileID: 2100000, guid: 2e33f09a49150b44e958e3e240d2312e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

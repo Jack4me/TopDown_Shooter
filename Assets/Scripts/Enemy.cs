@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform targetPosition;
     void Awake(){
         _move = GetComponent<Move>();
+        targetPosition = FindObjectOfType<PlayerArmory>().transform;
     }
     void Update()
     {

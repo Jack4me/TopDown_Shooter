@@ -43,8 +43,7 @@ public class MoveAndRotation : MonoBehaviour
         }
 
 
-        //PlayerMoveWASD();
-        // EnemyMove();
+        
     }
 
     public void PlayerMoveWASD(){
