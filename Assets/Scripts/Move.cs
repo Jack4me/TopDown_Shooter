@@ -39,18 +39,3 @@ public class Move : MonoBehaviour {
     }
     
 }
-
-//
-// public void SetDirection(Vector3 destination){
-//     transform.position = destination;
-// }
-//
-// public void SetDestinationPoint(Vector3 dir, bool Active){
-//     if (Active == true){
-//         transform.position += dir * speed * Time.deltaTime;
-//     }
-//
-//     if (Active == false){
-//         transform.position = Vector3.MoveTowards(transform.position, dir, Time.deltaTime * speed);
-//     }
-// }
