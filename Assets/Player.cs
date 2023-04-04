@@ -4,27 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    
-        void Update()
-        {
-            //Get the Screen positions of the object
-            Vector3 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
+    private Move _move;
+    [SerializeField] private Transform targetPosition;
+    private Vector3 direction;
+    public float speed = 50; 
+    void Awake(){
+        _move = GetComponent<Move>();
+        
+    }
 
-            //Get the Screen position of the mouse
-            Vector3 mouseOnScreen = (Vector3)Camera.main.ScreenToViewportPoint(Input.mousePosition);
+    private void Update(){
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0,Input.GetAxis("Vertical") );
 
-            Debug.Log("positionOnScreen" + positionOnScreen);
-            Debug.Log("mouseOnScreen" + mouseOnScreen);
-            // //Get the angle between the points
-            // float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
-            //
-            // //Ta Daaa
-            // transform.rotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
-        }
-
-        float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
-        {
-            return Mathf.Atan2(a.z - b.z, a.x - b.x) * Mathf.Rad2Deg;
-        }
-    
+        _move.SetDirection(direction);
+    }
 }

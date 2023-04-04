@@ -15,6 +15,6 @@ public class MovableCubeDestroyerSasha : MonoBehaviour {
         
         
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        _move.SetDirection(input, true);
+        _move.SetDirection(input);
     }
 }

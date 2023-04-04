@@ -8,10 +8,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform targetPosition;
     void Awake(){
         _move = GetComponent<Move>();
-        targetPosition = FindObjectOfType<PlayerArmory>().transform;
+        targetPosition = FindObjectOfType<Player>().transform;
     }
     void Update()
     {
-        _move.SetDirection(targetPosition.position, false);
+        _move.SetDestinationPoint(targetPosition.position);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ public class PlayerInput : MonoBehaviour {
     private Vector2 directionMove, mouseLook, joystickLook;
     private Vector3 rotationTarget;
     public bool isPC;
+    private Move move;
+
+    private void Awake(){
+        move = GetComponent<Move>();
+    }
 
     public void MoveOn(InputAction.CallbackContext context){
         directionMove = context.ReadValue<Vector2>();
@@ -30,13 +36,13 @@ public class PlayerInput : MonoBehaviour {
                 rotationTarget = hit.point;
             }
 
-            movePlayerWithAim();
+            movePlayerInDirection();
         }
         else{
             if (joystickLook.x == 0 && joystickLook.y == 0)
                 PlayerMove();
             else{
-                movePlayerWithAim();
+                movePlayerInDirection();
             }
         }
     }
@@ -51,7 +57,7 @@ public class PlayerInput : MonoBehaviour {
             transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 
-    public void movePlayerWithAim(){
+    public void movePlayerInDirection(){
         if (isPC){
             var lookPos = rotationTarget - transform.position;
             lookPos.y = 0;
